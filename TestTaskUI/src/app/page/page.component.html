@@ -1,0 +1,35 @@
+<body>
+  <h1>Employees</h1>
+  <button type="button" name="button" (click)="loguot()">Log out</button>
+
+  <br>
+
+  <table>
+  <tr>
+    <th>| ***** |</th>
+    <th>| ***** |</th>
+    <th>| empID |</th>
+    <th>| empName |</th>
+    <th>| empActive |</th>
+    <th>| dpName |</th>
+    <th>| ***** |</th>
+  </tr>
+  <tr *ngFor='let e of employees'>
+    <td><button type="button" name="button" (click)="view(e.id)">View</button></td>
+    <td><button type="button" name="button" (click)="edit(e.id)">Edit</button></td>
+    <td>{{e.id}} </td>
+    <td>{{e.name}} </td>
+    <td>{{e.active}}</td>
+    <td> {{e.dep}}</td>
+    <td><button type="button" name="button" (click)="delete(e.id)">Delete</button></td>
+  </tr>
+</table>
+<br>
+<br>
+<button type="button" name="button" (click)="prev()"><</button>
+<p>page: {{page}}</p>
+<button type="button" name="button" (click)="next()">></button>
+<br>
+<br>
+<button type="button" name="button" (click)="search()">Search</button>
+</body>

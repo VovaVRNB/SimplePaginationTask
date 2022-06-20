@@ -1,0 +1,19 @@
+<h3>Change employee</h3>
+<input type="text" name="" value="{{emp.empName}}" #name>
+<br>
+<br>
+<select name="dep" id="dep" #active>
+  <option value="true">YES</option>
+  <option value="false">NO</option>
+</select><label for="vehicle1">Active</label><br>
+<br>
+  <label for="cars">Choose department:</label>
+  <select name="dep" id="dep" #dep>
+    <option value="1">Tech</option>
+    <option value="2">HR</option>
+    <option value="3">Finance</option>
+  </select>
+<br>
+<br>
+<button type="button" name="button" (click)="edit(name.value, active.value, dep.value)">EDIT</button>
+<button type="button" name="button" (click)="exit()">EXIT</button>

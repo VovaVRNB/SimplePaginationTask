@@ -1,0 +1,20 @@
+<h3>Lets find someone!</h3>
+<input type="text" name="" value="" #criteria>
+<button type="button" name="button" (click)="search(criteria.value)">SEARCH</button>
+<br>
+<table>
+<tr>
+  <th>| empID |</th>
+  <th>| empName |</th>
+  <th>| empActive |</th>
+  <th>| dpName |</th>
+</tr>
+<tr *ngFor='let e of employees'>
+  <td>{{e.id}} </td>
+  <td>{{e.name}} </td>
+  <td>{{e.active}}</td>
+  <td> {{e.dep}}</td>
+</tr>
+</table>
+<br>
+<button type="button" name="button" (click)="exit()">EXIT</button>
